@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+git archive --format=zip --prefix=fakturaonline-woocommerce/ -o fakturaonline-woocommerce.zip HEAD \
+  fakturaonline-woocommerce.php uninstall.php includes readme.md LICENSE
+echo "fakturaonline-woocommerce.zip"
